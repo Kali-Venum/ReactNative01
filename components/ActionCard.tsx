@@ -24,7 +24,11 @@ export default function ActionCard() {
 }
 
 const styles = StyleSheet.create({
-  headingText: {},
+  headingText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    padding: 8
+  },
   card: {},
   elevetedCard: {},
   headingContainer: {},
