@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {FlatList, StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
 
 export default function TestScreen() {
@@ -63,7 +63,23 @@ export default function TestScreen() {
             }}></View>
         </View>
 
-        <View></View>
+        <View style={{marginTop: 80}}>
+          <FlatList
+            // style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
+            data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 6, 2, 4, 5, 67, 67]}
+            numColumns={2}
+            renderItem={({item}) => (
+              <View
+                style={{
+                  width: '45%',
+                  height: 200,
+                  backgroundColor: 'green',
+                  borderWidth: 1,
+                  margin: 10,
+                }}></View>
+            )}
+          />
+        </View>
       </View>
     </View>
   );
