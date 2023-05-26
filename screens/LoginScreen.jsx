@@ -19,11 +19,11 @@ export default function LoginScreen() {
       </View>
       <View style={styles.imageView}>
         <Image
-          style={{height: 200, width: 200}}
+          style={{height: 300, width: 300}}
           source={require('../assets/login-logo.jpg')}
         />
       </View>
-      <View>
+      <View style={styles.loginView}>
         <TextInput
           style={styles.textInput}
           placeholder="Enter your email"
@@ -56,6 +56,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     margin: 30,
+  },
+  loginView: {
+    marginVertical: 20
   },
   textInput: {
     height: 40,
