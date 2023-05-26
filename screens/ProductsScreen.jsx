@@ -62,11 +62,13 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     flex: 3,
     marginLeft: 10,
+    height: 40
   },
   searchBar: {
     marginLeft: 10,
     flex: 1,
     paddingLeft: 5,
+    height: 40
   },
   iconView: {
     flex: 1,

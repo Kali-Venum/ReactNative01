@@ -1,133 +1,37 @@
-import {ScrollView, StyleSheet, Text, View, Image} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+} from 'react-native';
 import React from 'react';
 
 export default function CardsList() {
   return (
-    <ScrollView>
-      <View style={styles.cardView}>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-      </View>
-
-      <View style={styles.cardView}>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-      </View>
-
-      <View style={styles.cardView}>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-      </View>
-
-      <View style={styles.cardView}>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            }}
-            width={190}
-            height={135}
-          />
-          <Text style={{fontWeight: 'bold', padding: 5}}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </Text>
-          <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
-        </View>
-      </View>
-    </ScrollView>
+      <FlatList
+        style={{marginTop: 60}}
+        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+        numColumns={2}
+        renderItem={({item}) => (
+          <View style={styles.card}>
+            <Image
+              source={{
+                uri: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+              }}
+              width={190}
+              height={135}
+            />
+            <Text style={{fontWeight: 'bold', padding: 5}}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
+              illum?
+            </Text>
+            <Text style={{fontWeight: 'bold', padding: 5}}>Rs:- 100</Text>
+          </View>
+        )}
+        keyExtractor={item => item.id}
+      />
   );
 }
 
@@ -140,7 +44,6 @@ const styles = StyleSheet.create({
   card: {
     width: 190,
     height: 210,
-    // backgroundColor: 'red',
     margin: 10,
   },
 });

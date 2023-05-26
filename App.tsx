@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
+      {/* <ScrollView> */}
         {/* <FlatCards /> */}
         {/* <ElevatedCards /> */}
         {/* <FancyCards /> */}
@@ -26,7 +26,7 @@ const App = () => {
         {/* <LoginScreen /> */}
 
         <ProductsScreen />
-      </ScrollView>
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };
