@@ -8,6 +8,7 @@ import FancyCards from './components/FancyCards';
 import ActionCard from './components/ActionCard';
 import SplashScreen from 'react-native-splash-screen';
 import LoginScreen from './screens/LoginScreen';
+import ProductsScreen from './screens/ProductsScreen';
 
 const App = () => {
   useEffect(() => {
@@ -22,7 +23,9 @@ const App = () => {
         {/* <FancyCards /> */}
         {/* <ActionCard /> */}
 
-        <LoginScreen />
+        {/* <LoginScreen /> */}
+
+        <ProductsScreen />
       </ScrollView>
     </SafeAreaView>
   );
