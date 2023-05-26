@@ -9,6 +9,7 @@ import ActionCard from './components/ActionCard';
 import SplashScreen from 'react-native-splash-screen';
 import LoginScreen from './screens/LoginScreen';
 import ProductsScreen from './screens/ProductsScreen';
+import TestScreen from './screens/TestScreen';
 
 const App = () => {
   useEffect(() => {
@@ -25,8 +26,9 @@ const App = () => {
 
         {/* <LoginScreen /> */}
 
-        <ProductsScreen />
+        {/* <ProductsScreen /> */}
       {/* </ScrollView> */}
+      <TestScreen/>
     </SafeAreaView>
   );
 };
